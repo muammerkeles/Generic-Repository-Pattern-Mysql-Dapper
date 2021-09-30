@@ -1,14 +1,15 @@
-﻿using GenericRepositoryPattern.Demo.Library.Model.Entities;
-using System;
+﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace GenericRepositoryPattern.Demo.Library.Abstract
 {
-    public interface IUserRepository
+    public interface IEntity
     {
-        Task<IEnumerable<UsersEntity>> GetAllDeactiveUsers(); 
+        public int Id { get; set; }
+        public DateTime CreatedDate { get; set; } 
     }
 }

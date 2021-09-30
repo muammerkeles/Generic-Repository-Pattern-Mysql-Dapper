@@ -1,4 +1,4 @@
-﻿using GenericRepositoryPattern.Demo.Library.Interface;
+﻿using GenericRepositoryPattern.Demo.Library.Abstract;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -11,7 +11,6 @@ using System.Reflection;
 using Dapper.Contrib.Extensions;
 using GenericRepositoryPattern.Demo.Library.Helper;
 using Dapper;
-using GenericRepositoryPattern.Demo.Library.Core;
 
 namespace GenericRepositoryPattern.Demo.Library.Concrete
 {
@@ -39,7 +38,7 @@ namespace GenericRepositoryPattern.Demo.Library.Concrete
         /// <returns></returns>
         private MySqlConnection SqlConnection()
         {
-            return new MySqlConnection(ConfigurationManager.ConnectionStrings["default"].ConnectionString);
+            return new MySqlConnection("Server=localhost;Port=3307;Database=testDB;User Id=root;password=1234;");// ConfigurationManager.ConnectionStrings["default"].ConnectionString);
         }
 
         /// <summary>
@@ -114,15 +113,18 @@ namespace GenericRepositoryPattern.Demo.Library.Concrete
 
         public async Task UpdateAsync(T t)
         {
+            using (var connection = CreateConnection())
+            {
+                await connection.UpdateAsync<T>(t);
+            }
+            /*
             var updateQuery = GenerateUpdateQuery();
 
             using (var connection = CreateConnection())
             {
                 await connection.ExecuteAsync(updateQuery, t);
-            }
+            }*/
         }
-
-
         private string GenerateUpdateQuery()
         {
             var updateQuery = new StringBuilder($"UPDATE {_tableName} SET ");
