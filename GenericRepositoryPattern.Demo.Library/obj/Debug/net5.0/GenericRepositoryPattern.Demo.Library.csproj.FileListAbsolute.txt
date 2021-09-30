@@ -1,0 +1,5 @@
+C:\Users\AsusNB\source\repos\GenericRepositoryPattern.Demo.Library\GenericRepositoryPattern.Demo.Library\obj\Debug\net5.0\GenericRepositoryPattern.Demo.Library.csproj.AssemblyReference.cache
+C:\Users\AsusNB\source\repos\GenericRepositoryPattern.Demo.Library\GenericRepositoryPattern.Demo.Library\obj\Debug\net5.0\GenericRepositoryPattern.Demo.Library.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\AsusNB\source\repos\GenericRepositoryPattern.Demo.Library\GenericRepositoryPattern.Demo.Library\obj\Debug\net5.0\GenericRepositoryPattern.Demo.Library.AssemblyInfoInputs.cache
+C:\Users\AsusNB\source\repos\GenericRepositoryPattern.Demo.Library\GenericRepositoryPattern.Demo.Library\obj\Debug\net5.0\GenericRepositoryPattern.Demo.Library.AssemblyInfo.cs
+C:\Users\AsusNB\source\repos\GenericRepositoryPattern.Demo.Library\GenericRepositoryPattern.Demo.Library\obj\Debug\net5.0\GenericRepositoryPattern.Demo.Library.csproj.CoreCompileInputs.cache
