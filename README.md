@@ -1,1 +1,1 @@
-# Generic-Repository-Pattern-Mysql-Dapper
+# Generic Repository Design Pattern - Mysql with Dapper ORM
